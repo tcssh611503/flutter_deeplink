@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Example2Page extends StatelessWidget {
+class Campaign extends StatelessWidget {
   final String _query;
 
-  Example2Page(this._query);
+  Campaign(this._query);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Example2',
+          'campaign page',
         ),
       ),
       body: Center(

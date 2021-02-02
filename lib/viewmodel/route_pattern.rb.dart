@@ -1,22 +1,22 @@
 abstract class RoutePattern {
   RoutePattern();
 
-  factory RoutePattern.example1(final String query) = RoutePatternExample1;
+  factory RoutePattern.shoppage(final String query) = RoutePatternExample1;
 
-  factory RoutePattern.example2(final String query) = RoutePatternExample2;
+  factory RoutePattern.campaign(final String query) = RoutePatternExample2;
 
-  factory RoutePattern.example3() = RoutePatternExample3;
+  factory RoutePattern.prod() = RoutePatternExample3;
 
   R when<R>(
-      {final R Function(RoutePatternExample1 state) example1,
-      final R Function(RoutePatternExample2 state) example2,
-      final R Function(RoutePatternExample3 state) example3}) {
+      {final R Function(RoutePatternExample1 state) shoppage,
+      final R Function(RoutePatternExample2 state) campaign,
+      final R Function(RoutePatternExample3 state) prod}) {
     if (this is RoutePatternExample1) {
-      return example1(this);
+      return shoppage(this);
     } else if (this is RoutePatternExample2) {
-      return example2(this);
+      return campaign(this);
     } else if (this is RoutePatternExample3) {
-      return example3(this);
+      return prod(this);
     } else {
       throw StateError;
     }

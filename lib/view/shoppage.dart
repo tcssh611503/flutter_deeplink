@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class Example1Page extends StatelessWidget {
+class ShopPage extends StatelessWidget {
   final String _query;
 
-  Example1Page(this._query);
+  ShopPage(this._query);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Example1',
+          'shopPage',
         ),
       ),
       body: Center(

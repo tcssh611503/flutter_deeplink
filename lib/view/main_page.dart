@@ -1,6 +1,6 @@
-import 'package:deep_link_flutter/view/example1_page.dart';
-import 'package:deep_link_flutter/view/example2_page.dart';
-import 'package:deep_link_flutter/view/example3_page.dart';
+import 'package:deep_link_flutter/view/shoppage.dart';
+import 'package:deep_link_flutter/view/camapign.dart';
+import 'package:deep_link_flutter/view/prod.dart';
 import 'package:deep_link_flutter/viewmodel/main_viewmodel.dart';
 import 'package:deep_link_flutter/viewmodel/route_pattern.rb.dart';
 import 'package:flutter/material.dart';
@@ -44,9 +44,9 @@ class _MainPageState extends State<MainPage> {
   Route _nextPageRoute(RoutePattern routePattern) {
     Widget page;
     routePattern.when(
-      example1: (pattern) => page = Example1Page(pattern.query),
-      example2: (pattern) => page = Example2Page(pattern.query),
-      example3: (pattern) => page = Example3Page(),
+      shoppage: (pattern) => page = ShopPage(pattern.query),
+      campaign: (pattern) => page = Campaign(pattern.query),
+      prod: (pattern) => page = ProdPage(),
     );
     return MaterialPageRoute(builder: (context) => page);
   }

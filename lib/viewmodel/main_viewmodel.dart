@@ -28,14 +28,17 @@ class MainViewModel {
   void _streamRoutePattern(Uri uri) {
     if (uri != null) {
       switch (uri.host) {
-        case 'example1':
-          _routePatternController.sink.add(RoutePattern.example1(uri.query));
+        case 'shoppage':
+          print(uri);
+          _routePatternController.sink.add(RoutePattern.shoppage(uri.query));
           break;
-        case 'example2':
-          _routePatternController.sink.add(RoutePattern.example2(uri.query));
+        case 'campaign':
+           print(uri);
+          _routePatternController.sink.add(RoutePattern.campaign(uri.query));
           break;
-        case 'example3':
-          _routePatternController.sink.add(RoutePattern.example3());
+        case 'prod':
+           print(uri);
+          _routePatternController.sink.add(RoutePattern.prod());
           break;
       }
     }
